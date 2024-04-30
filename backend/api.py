@@ -1,11 +1,25 @@
+from flask import Flask, request, jsonify
+
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import Select
 import time
 
+app = Flask(__name__)
+
 page = 'https://www.imdb.com/'
-movie = 'Interstellar'
+movie = ''
 recent_reviews = [] 
+
+@app.route('/getTitle', methods=['POST'])
+def submit_form():
+    data = request.json
+    print(data)
+    return jsonify({'message': 'Form submitted successfully'})
+    # return {"members": ['Member1', 'Member2']}
+
+if __name__ == '__main__':
+    app.run(debug=True)
 
 def main():
     driver = webdriver.Chrome()
@@ -29,4 +43,4 @@ def main():
     recent_reviews = reviews_text[:20]
     return recent_reviews
 
-main()
+# main()

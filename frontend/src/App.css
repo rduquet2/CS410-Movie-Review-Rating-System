@@ -1,0 +1,29 @@
+body {
+  background-image: url("../public/movie_cards_bg.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+}
+
+.search-container {
+  margin-top: -300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #E5B80B;
+  width: 45%;
+  height: 50vh;
+  border: 5px solid black;
+  border-radius: 100px;
+}
+
+.search-title {
+  
+}
