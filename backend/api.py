@@ -7,21 +7,17 @@ import time
 
 app = Flask(__name__)
 
-page = 'https://www.imdb.com/'
-movie = ''
-recent_reviews = [] 
-
 @app.route('/getTitle', methods=['POST'])
 def submit_form():
     data = request.json
-    print(data)
+    movie = data['title']
+    reviews = get_reviews(movie)
+    print(reviews)
     return jsonify({'message': 'Form submitted successfully'})
-    # return {"members": ['Member1', 'Member2']}
 
-if __name__ == '__main__':
-    app.run(debug=True)
-
-def main():
+def get_reviews(movie):
+    page = 'https://www.imdb.com/'
+    
     driver = webdriver.Chrome()
     driver.get(page)
     search_form = driver.find_element(By.ID, "suggestion-search")
@@ -43,4 +39,5 @@ def main():
     recent_reviews = reviews_text[:20]
     return recent_reviews
 
-# main()
+if __name__ == '__main__':
+    app.run(debug=True)

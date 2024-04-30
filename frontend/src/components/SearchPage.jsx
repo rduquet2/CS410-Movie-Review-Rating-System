@@ -11,8 +11,7 @@ function SearchPage() {
 
   const sendMovieTitle = (e) => {
     e.preventDefault()
-    console.log('here')
-    axios.post('/getTitle', {data: movieTitle})
+    axios.post('/getTitle', {title: movieTitle})
         .then(res => console.log(res.data))
         .catch(error => console.error(error));
   }
