@@ -1,20 +1,21 @@
 # CS410-Movie-Review-Rating-System
 
-<<<<<<< HEAD
 Instructions
-
+```
 cd backend
 python3 -m venv venv
 source venv/bin/activate
 pip3 install flask
 pip3 install selenium
 python3 api.py
+```
 
+```
 cd frontend
 npm install axios
 npm start
+```
 
-=======
 Abstract: \
 We are planning on making a system that can recommend whether or not to watch a movie that a user inputs. We want to do this by taking in movie reviews from Rotten Tomatoes and IMDB and sorting the reviews based on positive reviews and negative reviews. We will do this by looking at key words within the reviews and sorting based on an algorithm. This algorithm will use data to train a model and assign probabilities to words on how often they appear in positive or negative reviews. Then, based on those probabilities, we will scan through new reviews and label them as positive or negative. We will then create a percentage based on how many positive reviews there are and how many negative reviews there are for a given movie. This percentage will be how likely we are to recommend this movie to the user.
 
