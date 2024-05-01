@@ -7,6 +7,8 @@ python3 -m venv venv
 source venv/bin/activate
 pip3 install flask
 pip3 install selenium
+pip3 install numpy
+pip3 install nltk
 python3 api.py
 ```
 
@@ -14,6 +16,7 @@ python3 api.py
 cd frontend
 npm install axios
 npm start
+(sometimes you have to do 'npx create-react-app frontend' and migrate all the files from the current frontend folder to the new frontend folder and rerun the commands above to run the react app)
 ```
 
 Abstract: \
